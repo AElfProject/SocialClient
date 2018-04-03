@@ -19,7 +19,7 @@ build_script:
   - ps: dotnet --info
   - ps: dotnet restore
   - ps: dotnet build
-  - ps: dotnet pack -o ../nugetpack -c release
+  - ps: dotnet pack -o ../nugetpack -c release --version-suffix $($env:appveyor_build_number)
 
 artifacts:
   - path: '**\*.nupkg'
