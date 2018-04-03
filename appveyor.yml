@@ -2,14 +2,12 @@ version: 1.0.{build}
 skip_tags: true
 image: Visual Studio 2017
 configuration: Release
-dotnet_csproj:
+assembly_info:
   patch: true
-  file: '**\*.csproj'
-  version: '{version}'
-  package_version: '{version}'
-  assembly_version: '{version}'
-  file_version: '{version}'
-  informational_version: '{version}'
+  file: AssemblyInfo.*
+  assembly_version: "{version}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
 build:
   publish_nuget: true
   verbosity: minimal
@@ -27,6 +25,7 @@ deploy:
     secure: Lta8u6yYcPzwEzPPHOWWOr+ZYOpa2jde4gVKkTA3qT6C/xgqwG8wDvkoaegBblmW
   on:
     branch: master
+  
 - provider: GitHub
   tag: v$(appveyor_build_version)
   release: v$(appveyor_build_version)
