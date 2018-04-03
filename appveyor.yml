@@ -10,11 +10,16 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
-before_build:
-- cmd: nuget restore
 build:
   publish_nuget: true
-  verbosity: detailed
+  verbosity: minimal
+  
+build_script:
+  - ps: dotnet --info
+  - ps: dotnet restore
+  - ps: dotnet --verbose build
+  - ps: dotnet --verbose pack
+  
 deploy:
 - provider: NuGet
   server: https://www.myget.org/F/aelf/api/v2/package
