@@ -1,16 +1,6 @@
 ﻿namespace SocialClient.Models
 {
     /// <summary>
-    /// 用户自己的信息
-    /// </summary>
-    public class AccountInfo: UserInfo
-    {
-        public string Email { get; set; }
-        
-        public string Username { get; set; }
-    }
-
-    /// <summary>
     /// 社交网络里面的任何一个用户
     /// </summary>
     public class UserInfo

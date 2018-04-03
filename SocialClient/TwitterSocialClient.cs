@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LinqToTwitter;
@@ -59,6 +60,26 @@ namespace SocialClient
                     Following = user.FriendsCount,
                 };
             });
+        }
+
+        public async Task<List<Comment>> GetComments(string postId, int offset = 0, int num = 0)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<List<Post>> GetPosts(string userId, int offset = 0, int num = 0)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<List<string>> GetFollowers(string userId, int offset = 0, int num = 0)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<List<string>> GetFollowing(string userId, int offset = 0, int num = 0)
+        {
+            throw new NotImplementedException();
         }
 
         public void Dispose()
