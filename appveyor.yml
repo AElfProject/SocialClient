@@ -17,8 +17,8 @@ build:
 build_script:
   - ps: dotnet --info
   - ps: dotnet restore
-  - ps: dotnet --verbose build
-  - ps: dotnet --verbose pack
+  - ps: dotnet build
+  - ps: dotnet pack
   
 deploy:
 - provider: NuGet
