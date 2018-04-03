@@ -82,6 +82,16 @@ namespace SocialClient
             throw new NotImplementedException();
         }
 
+        public async Task<List<UserInfo>> GetUsers(IEnumerable<string> ids)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<UserInfo> GetUser(string id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Dispose()
         {
             _context?.Dispose();

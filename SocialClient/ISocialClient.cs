@@ -13,5 +13,10 @@ namespace SocialClient
         Task<List<Post>> GetPosts(string userId, int offset = 0, int num = 0);
         Task<List<string>> GetFollowers(string userId, int offset = 0, int num = 0);
         Task<List<string>> GetFollowing(string userId, int offset = 0, int num = 0);
+
+        Task<List<UserInfo>> GetUsers(IEnumerable<string> ids);
+        Task<UserInfo> GetUser(string id);
+
     }
+
 }
