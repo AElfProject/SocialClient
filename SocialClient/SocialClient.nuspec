@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0"?>
+<package>
     <metadata>
         <id>SocialClient</id>
         <version>$version$</version>
         <authors>Loning</authors>
         <owners>Loning</owners>
+        <projectUrl>https://github.com/loning/SnsClient</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>...</description>
+        <releaseNotes>...</releaseNotes>
+        <copyright>Copyright 2014-2015</copyright>
+        <tags></tags>
     </metadata>
 </package>
