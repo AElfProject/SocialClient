@@ -1,10 +1,9 @@
-﻿namespace SocialClient
+﻿namespace SocialClient.Clients
 {
-    public class AuthContext
+    public class OAuth
     {
         public string AppKey { get; set; }
         public string AppSecret { get; set; }
         public string AccessToken { get; set; }
-        public string AccessTokenSecret { get; set; }
     }
 }

@@ -3,8 +3,26 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Facebook.ApiClient" Version="2.0.0" />
-    <PackageReference Include="Facebook.ApiClient.Entities" Version="1.1.2" />
     <PackageReference Include="linqtotwitter" Version="5.0.0-beta2" />
+    <PackageReference Include="RestSharp" Version="106.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Facebook\" />
+    <Folder Include="Clients\" />
+    <Folder Include="Clients\Facebook\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="HttpClient\GetRequest.cs" />
+    <Compile Remove="HttpClient\PostRequest.cs" />
+    <Compile Remove="APIs\Facebook\FacebookClient.cs" />
+    <Compile Remove="Clients\FacebookClient.cs" />
+    <Compile Remove="Clients\GetRequest.cs" />
+    <Compile Remove="Clients\PostRequest.cs" />
+    <Compile Remove="Clients\Request.cs" />
+    <Compile Remove="Clients\IRequest.cs" />
+    <Compile Remove="FacebookSocialClient.cs" />
+    <Compile Remove="TwitterSocialClient.cs" />
+    <Compile Remove="Clients\Auth.cs" />
   </ItemGroup>
 </Project>

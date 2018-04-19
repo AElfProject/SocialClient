@@ -1,6 +1,6 @@
 ﻿namespace SocialClient
 {
-    public enum SocialClientRequestExceptionTypes
+    public enum SocialClientExceptionTypes
     {
         Unknow,
         RateLimit
