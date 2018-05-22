@@ -3,23 +3,28 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading.Tasks;
 using RestSharp;
+using SocialClient.Exceptions;
 
-namespace SocialClient
+namespace SocialClient.Clients
 {
     public class RequestClient
     {
-        private RestClient restClient;
+        private readonly RestClient _restClient;
         private Stopwatch _apiTimer;
 
-        public RequestClient(string host)
+        public RequestClient(string host, string proxy)
         {
-            restClient = new RestClient(host);
+            _restClient = new RestClient(host);
+            if (!string.IsNullOrEmpty(proxy))
+            {
+                _restClient.Proxy = new WebProxy(proxy);
+            }
         }
 
         public async Task<IRestResponse<T>> ExecuteTaskAsync<T>(RestRequest request)
         {
             StartTimer();
-            IRestResponse<T> response = await restClient.ExecuteTaskAsync<T>(request);
+            var response = await _restClient.ExecuteTaskAsync<T>(request);
             StopTimer();
 
             if (response.ErrorException != null)

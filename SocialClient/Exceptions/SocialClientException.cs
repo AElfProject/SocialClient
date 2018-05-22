@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace SocialClient
+namespace SocialClient.Exceptions
 {
     [Serializable]
     public class SocialClientException : Exception
