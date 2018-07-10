@@ -29,14 +29,12 @@ deploy:
     secure: Lta8u6yYcPzwEzPPHOWWOr+ZYOpa2jde4gVKkTA3qT6C/xgqwG8wDvkoaegBblmW
   on:
     branch: master
-    appveyor_repo_tag: true
 
 - provider: NuGet
   api_key:
     secure: CKShfLHrna+p06m+kjXqiiM7BAiLZZXBPvxQFBBJHKg7har/XiLXhLIvx5zsTRPJ
   on:
     branch: master
-    appveyor_repo_tag: true
 
 - provider: GitHub
   tag: v$(appveyor_build_version)
@@ -46,4 +44,3 @@ deploy:
   artifact: /.*\.nupkg/
   on:
     branch: master
-    appveyor_repo_tag: true
