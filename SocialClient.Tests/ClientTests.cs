@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using SocialClient.Clients.Facebook;
 using Xunit;
 
 namespace SocialClient.Tests
@@ -10,7 +11,7 @@ namespace SocialClient.Tests
         
         public ClientTests()
         {
-            _client = new TwitterSocialClient();
+            _client = new T();
             _client.Auth(GetAuthContext());
         }
         
@@ -23,7 +24,7 @@ namespace SocialClient.Tests
         }
     }
 
-    public class TwitterClientTests : ClientTests<TwitterSocialClient>
+    public class FacebookClientTests : ClientTests<FacebookSocialClient>
     {
         protected override AuthContext GetAuthContext()
         {
